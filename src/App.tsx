@@ -20,7 +20,7 @@ export default function App() {
   const [isSignupOpen, setIsSignupOpen] = useState(false)
 
   return (
-    <main className="min-h-screen min-w-full bg-black">
+    <main className="min-h-screen min-w-full">
       <Navbar onLoginClick={() => setIsLoginOpen(true)} onSignupClick={() => setIsSignupOpen(true)} />
       <Outlet />
         <Hero onLoginClick={() => setIsLoginOpen(true)} />

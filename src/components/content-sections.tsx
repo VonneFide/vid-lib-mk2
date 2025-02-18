@@ -2,28 +2,31 @@
 
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
+import BusinessCoachImg from '../assets/business-coach.jpg'
+import DigitalMarketImg from '../assets/digital-market.jpg'
+import MasterContentmg from '../assets/master-content.jpg'
 
 const sections = [
   {
     title: "Sales and Business Strategies",
     description:
       "Learn how to effectively market and sell your video content, grow your audience, and monetize your skills.",
-    image: "/placeholder.svg?height=400&width=600",
-    link: "/videos/page",
+    image: BusinessCoachImg,
+    link: "/Library",
   },
   {
     title: "Cutting-edge Marketing Videos",
     description:
       "Master the latest techniques in creating compelling marketing videos that drive engagement and conversions.",
-    image: "/placeholder.svg?height=400&width=600",
-    link: "/videos/page",
+    image: DigitalMarketImg,
+    link: "/Library",
   },
   {
     title: "Maximize Creativity for Content Creation",
     description:
       "Unlock your creative potential and learn how to consistently produce innovative and engaging video content.",
-    image: "/placeholder.svg?height=400&width=600",
-    link: "/videos/page",
+    image: MasterContentmg,
+    link: "/Library",
   },
 ]
 

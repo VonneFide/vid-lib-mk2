@@ -1,10 +1,12 @@
-
-
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { ChevronLeft, ChevronRight } from "lucide-react"
-import Placeholder from '../assets/placeholder.svg'
-import '../index.css'
+import CarouselImg1 from '../assets/car-item1.jpg'
+import CarouselImg2 from '../assets/car-item2.jpg'
+import CarouselImg3 from '../assets/car-item3.jpg'
+import CarouselImg4 from '../assets/car-item4.jpg'
+import CarouselImg5 from '../assets/car-item5.jpg'
+import CarouselImg6 from '../assets/car-item6.jpg'
 
 interface HeroProps {
   onLoginClick: () => void
@@ -14,21 +16,42 @@ const slides = [
   {
     title: "Master the Art of Video Creation",
     description: "Learn professional techniques from industry experts and elevate your content.",
-    image: Placeholder,
+    image: CarouselImg1,
     cta: "Start Learning",
     link: "/courses",
   },
   {
     title: "Unlock Your Creative Potential",
     description: "Discover new tools and techniques to bring your vision to life.",
-    image: Placeholder,
+    image: CarouselImg2,
     cta: "Explore Courses",
     link: "/explore",
   },
   {
     title: "Join a Community of Creators",
     description: "Connect, collaborate, and grow with fellow video enthusiasts.",
-    image: Placeholder,
+    image: CarouselImg3,
+    cta: "Join Now",
+    link: "/community",
+  },
+  {
+    title: "Sound Design",
+    description: "Craft immersive audio experiences",
+    image: CarouselImg4,
+    cta: "Join Now",
+    link: "/community",
+  },
+  {
+    title: "Visual Effects",
+    description: "Create stunning visual effects",
+    image: CarouselImg5,
+    cta: "Join Now",
+    link: "/community",
+  },
+  {
+    title: "Scriptwriting",
+    description: "Write compelling screenplays",
+    image: CarouselImg6,
     cta: "Join Now",
     link: "/community",
   },
@@ -48,7 +71,7 @@ export default function Hero({ onLoginClick }: HeroProps) {
   const prev = () => setCurrent((current - 1 + slides.length) % slides.length)
 
   return (
-<section className="relative h-screen overflow-hidden">
+    <section className="relative h-screen overflow-hidden">
       <AnimatePresence mode="wait">
         <motion.div
           key={current}
@@ -66,7 +89,7 @@ export default function Hero({ onLoginClick }: HeroProps) {
             transition={{ duration: 0.5 }}
             style={{ backgroundImage: `url(${slides[current].image})` }}
           />
-      <div className="absolute inset-0 bg-black opacity-50" />
+          <div className="absolute inset-0 bg-black opacity-50" />
         </motion.div>
       </AnimatePresence>
       <div className="absolute inset-0 flex items-center justify-center">

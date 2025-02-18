@@ -114,7 +114,7 @@ export default function Footer() {
         </div>
         <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-xs md:text-sm text-gray-400">
-            © {new Date().getFullYear()} VideoLib. All rights reserved.
+            © {new Date().getFullYear()} VideoLib. All rights reserved by @VonneFide.
           </p>
           <div className="flex space-x-4 md:space-x-6 mt-4 md:mt-0">
             <Link to="/terms" className="text-xs md:text-sm text-gray-400 hover:text-[#E17564]">
