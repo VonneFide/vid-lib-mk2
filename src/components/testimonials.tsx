@@ -3,25 +3,28 @@
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react"
+import SarahImg from '../assets/sarah williams.jpg'
+import Michaelmg from '../assets/michael brown.jpg'
+import DavidImg from '../assets/david chen.png'
 
 const testimonials = [
   {
     name: "David Chen",
     role: "Content Creator",
     text: "This platform transformed my video creation skills. The courses are comprehensive and the instructors are amazing.",
-    image: "/placeholder.svg?height=80&width=80",
+    image: DavidImg,
   },
   {
     name: "Sarah Williams",
     role: "YouTuber",
     text: "I learned more in 3 months here than I did in a year of trying to learn on my own. Highly recommended!",
-    image: "/placeholder.svg?height=80&width=80",
+    image: SarahImg,
   },
   {
     name: "Michael Brown",
     role: "Filmmaker",
     text: "The quality of instruction and community support here is unmatched. Worth every penny.",
-    image: "/placeholder.svg?height=80&width=80",
+    image: Michaelmg,
   },
 ]
 

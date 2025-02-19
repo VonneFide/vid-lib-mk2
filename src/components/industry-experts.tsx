@@ -1,33 +1,37 @@
 
 
 import { motion } from "framer-motion"
+import SarahImg from '../assets/sarah williams.jpg'
+import Michaelmg from '../assets/michael brown.jpg'
+import EmilyImg from '../assets/emily rodriguez.jpg'
+import DavidImg from '../assets/david chen.png'
 
 const experts = [
   {
     name: "Sarah Johnson",
     role: "Award-winning Filmmaker",
-    image: "/placeholder.svg?height=200&width=200",
+    image: SarahImg,
     description:
       "With over 15 years of experience in the film industry, Sarah brings a wealth of knowledge in cinematography and storytelling.",
   },
   {
     name: "Michael Chen",
     role: "Digital Marketing Guru",
-    image: "/placeholder.svg?height=200&width=200",
+    image: Michaelmg,
     description:
       "Michael is a renowned expert in creating viral marketing videos and building brand presence through video content.",
   },
   {
     name: "Emily Rodriguez",
     role: "Animation Specialist",
-    image: "/placeholder.svg?height=200&width=200",
+    image: EmilyImg,
     description:
       "Emily's innovative approach to 2D and 3D animation has earned her multiple industry awards and a dedicated following.",
   },
   {
     name: "David Kim",
     role: "Sound Design Expert",
-    image: "/placeholder.svg?height=200&width=200",
+    image: DavidImg,
     description:
       "David's expertise in audio engineering and sound design has been featured in numerous blockbuster films and popular video games.",
   },
