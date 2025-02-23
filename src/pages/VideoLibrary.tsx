@@ -109,6 +109,8 @@ export default function VideosPage() {
         </div>
       </div>
 
+      {/* Video Player */}
+      <Outlet/>
 
       {/* Main Content */}
       <main className="flex-1 overflow-auto">
