@@ -1,29 +1,29 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import { Search, Filter, Home, TrendingUp, FolderOpen, PlayCircle, Heart, Clock, LogOut, Share2 } from "lucide-react"
-import { useNavigate, Outlet  } from "react-router-dom"
+import { Link, useNavigate, useSearchParams  } from "react-router-dom"
 import videos from "../lib/data"
-import ManProfImg from '../assets/man.png' 
+import UserProfile from '../assets/man.png'
 
 const categories = [
   "All",
-  "Popular",
   "Video Creation",
   "Marketing",
   "Animation",
   "Sound Design",
-  "Your Videos",
-  "Favorites",
-  "Watch Later",
+  "Business",
+  "Health",
+  "Fitness",
+  "Technology",
 ]
 
 const sidebarItems = [
-  { icon: Home, label: "Home" },
-  { icon: TrendingUp, label: "Popular" },
-  { icon: FolderOpen, label: "Categories" },
-  { icon: PlayCircle, label: "Your Videos" },
-  { icon: Heart, label: "Favorites" },
-  { icon: Clock, label: "Watch Later" },
+  { icon: Home, label: "Home", href: "/Library" },
+  { icon: TrendingUp, label: "Popular", href: "/Library?category=Popular" },
+  { icon: FolderOpen, label: "Categories", href: "/Library?category=Categories" },
+  { icon: PlayCircle, label: "Your Videos", href: "/Library?category=Your Videos" },
+  { icon: Heart, label: "Favorites", href: "/Library?category=Favorites" },
+  { icon: Clock, label: "Watch Later", href: "/Library?category=Watch Later" },
 ]
 
 export default function VideosPage() {
@@ -32,6 +32,15 @@ export default function VideosPage() {
   const [isFilterOpen, setIsFilterOpen] = useState(false)
   const [activeSidebarItem, setActiveSidebarItem] = useState("Home")
   const router = useNavigate()
+  const [searchParams] = useSearchParams()
+
+  useEffect(() => {
+    const category = searchParams.get("category")
+    if (category) {
+      setSelectedCategory(category)
+      setActiveSidebarItem(category === "Categories" ? "Categories" : "Home")
+    }
+  }, [searchParams])
 
   const filteredVideos =
     selectedCategory === "All" ? videos : videos.filter((video) => video.categories.includes(selectedCategory))
@@ -47,19 +56,10 @@ export default function VideosPage() {
     router("/") // Redirect to homepage
   }
 
-  const handleSidebarItemClick = (label: string) => {
-    setActiveSidebarItem(label)
-    if (label !== "Home" && label !== "Categories") {
-      setSelectedCategory(label)
-    } else if (label === "Home") {
-      setSelectedCategory("All")
-    }
-  }
-
   const handleCategoryClick = (category: string) => {
     setSelectedCategory(category)
     if (activeSidebarItem === "Categories") {
-      setActiveSidebarItem("Home")
+      router(`/Library?category=${category}`) //navigates to categories
     }
   }
 
@@ -68,30 +68,34 @@ export default function VideosPage() {
       {/* Sidebar */}
       <div className="w-64 bg-[#09122C] text-white flex flex-col h-screen">
         <div className="p-6">
-          <h1 className="text-2xl font-bold cursor-pointer" onClick={() => router("/")}>
+          <Link to="/" className="text-2xl font-bold">
             VideoLib
-          </h1>
+          </Link>
         </div>
 
         <nav className="flex-1 px-4">
           {sidebarItems.map((item) => (
-            <button
+            <Link
               key={item.label}
-              className={`flex items-center space-x-3 px-4 py-3 rounded-lg text-gray-300 hover:text-white hover:bg-white/10 transition-colors w-full text-left ${
+              to={item.href}
+              className={`flex items-center space-x-3 px-4 py-3 rounded-lg text-gray-300 hover:text-white hover:bg-white/10 transition-colors ${
                 activeSidebarItem === item.label ? "bg-white/10 text-white" : ""
               }`}
-              onClick={() => handleSidebarItemClick(item.label)}
+              onClick={() => {
+                setActiveSidebarItem(item.label)
+                if (item.label !== "Home" && item.label !== "Categories") setSelectedCategory(item.label)
+              }}
             >
               <item.icon className="w-5 h-5" />
               <span>{item.label}</span>
-            </button>
+            </Link>
           ))}
         </nav>
 
         <div className="p-4 border-t border-gray-700">
-          <div className="flex items-center space-x-3 mb-4">
+          <div className="flex space-x-3 mb-4">
             <img
-              src= {ManProfImg}
+              src= {UserProfile}
               alt="User profile"
               width={40}
               height={40}
@@ -109,10 +113,8 @@ export default function VideosPage() {
         </div>
       </div>
 
-
       {/* Main Content */}
       <main className="flex-1 overflow-auto">
-      
         <div className="sticky top-0 z-10 bg-white border-b border-gray-200 px-6 py-4">
           <div className="flex items-center space-x-4 mb-6">
             <div className="relative flex-1">
@@ -136,6 +138,8 @@ export default function VideosPage() {
               Upload Video
             </button>
           </div>
+
+          {/* Active genre header items */}
           {activeSidebarItem !== "Categories" && (
             <div className="flex gap-2 overflow-x-auto pb-2">
               {categories.map((category) => (
@@ -154,6 +158,7 @@ export default function VideosPage() {
             </div>
           )}
         </div>
+
         <div className="p-6">
           {isFilterOpen && (
             <motion.div
@@ -212,10 +217,8 @@ export default function VideosPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3, delay: index * 0.1 }}
-                  className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer"
-                  onClick={() => router(`/Library/video/play/${video.id}`, {replace : true})}
+                  className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"
                 >
-                  
                   <div className="relative group">
                     <img
                       src={video.thumbnail || "/placeholder.svg"}
@@ -244,13 +247,13 @@ export default function VideosPage() {
                         <span className="text-gray-600">{new Date(video.date).toLocaleDateString()}</span>
                       </div>
                       <div className="flex items-center space-x-2">
-                        <button className="p-1 text-gray-600 hover:text-[#872341]" onClick={(e) => e.stopPropagation()}>
+                        <button className="p-1 text-gray-600 hover:text-[#872341]">
                           <Heart className="w-4 h-4" />
                         </button>
-                        <button className="p-1 text-gray-600 hover:text-[#872341]" onClick={(e) => e.stopPropagation()}>
+                        <button className="p-1 text-gray-600 hover:text-[#872341]">
                           <Clock className="w-4 h-4" />
                         </button>
-                        <button className="p-1 text-gray-600 hover:text-[#872341]" onClick={(e) => e.stopPropagation()}>
+                        <button className="p-1 text-gray-600 hover:text-[#872341]">
                           <Share2 className="w-4 h-4" />
                         </button>
                       </div>

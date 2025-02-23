@@ -1,6 +1,7 @@
 export interface Video {
     id: number
     title: string
+    description:string
     author: string
     thumbnail: string
     duration: string
@@ -13,6 +14,7 @@ export interface Video {
     {
       id: 1,
       title: "Advanced Video Editing Masterclass",
+      description: "Quis culpa velit officia dolor nostrud est amet incididunt ipsum. Proident est et do dolore qui tempor sit dolor minim cillum. In laboris nostrud sint et amet velit sint eiusmod minim nulla est. Magna enim magna ad reprehenderit consequat. Eu magna aliqua fugiat velit anim adipisicing dolore quis fugiat officia.",
       author: "Sarah Johnson",
       thumbnail: "/placeholder.svg?height=200&width=350",
       duration: "42:30",
@@ -23,6 +25,7 @@ export interface Video {
     {
       id: 2,
       title: "Professional Lighting Techniques",
+      description: "Quis culpa velit officia dolor nostrud est amet incididunt ipsum. Proident est et do dolore qui tempor sit dolor minim cillum. In laboris nostrud sint et amet velit sint eiusmod minim nulla est. Magna enim magna ad reprehenderit consequat. Eu magna aliqua fugiat velit anim adipisicing dolore quis fugiat officia.",
       author: "Michael Chen",
       thumbnail: "/placeholder.svg?height=200&width=350",
       duration: "35:45",
@@ -33,6 +36,7 @@ export interface Video {
     {
       id: 3,
       title: "Viral Video Creation Secrets",
+      description: "Quis culpa velit officia dolor nostrud est amet incididunt ipsum. Proident est et do dolore qui tempor sit dolor minim cillum. In laboris nostrud sint et amet velit sint eiusmod minim nulla est. Magna enim magna ad reprehenderit consequat. Eu magna aliqua fugiat velit anim adipisicing dolore quis fugiat officia.",
       author: "Alex Rivera",
       thumbnail: "/placeholder.svg?height=200&width=350",
       duration: "55:20",
@@ -43,6 +47,7 @@ export interface Video {
     {
       id: 4,
       title: "YouTube Algorithm Mastery",
+      description: "Quis culpa velit officia dolor nostrud est amet incididunt ipsum. Proident est et do dolore qui tempor sit dolor minim cillum. In laboris nostrud sint et amet velit sint eiusmod minim nulla est. Magna enim magna ad reprehenderit consequat. Eu magna aliqua fugiat velit anim adipisicing dolore quis fugiat officia.",
       author: "Emma Wilson",
       thumbnail: "/placeholder.svg?height=200&width=350",
       duration: "48:15",
@@ -53,6 +58,7 @@ export interface Video {
     {
       id: 5,
       title: "Social Media Video Marketing",
+      description: "Quis culpa velit officia dolor nostrud est amet incididunt ipsum. Proident est et do dolore qui tempor sit dolor minim cillum. In laboris nostrud sint et amet velit sint eiusmod minim nulla est. Magna enim magna ad reprehenderit consequat. Eu magna aliqua fugiat velit anim adipisicing dolore quis fugiat officia.",
       author: "David Kim",
       thumbnail: "/placeholder.svg?height=200&width=350",
       duration: "39:45",
@@ -63,6 +69,7 @@ export interface Video {
     {
       id: 6,
       title: "TikTok Content Strategy",
+      description: "Quis culpa velit officia dolor nostrud est amet incididunt ipsum. Proident est et do dolore qui tempor sit dolor minim cillum. In laboris nostrud sint et amet velit sint eiusmod minim nulla est. Magna enim magna ad reprehenderit consequat. Eu magna aliqua fugiat velit anim adipisicing dolore quis fugiat officia.",
       author: "Sophie Chen",
       thumbnail: "/placeholder.svg?height=200&width=350",
       duration: "32:20",
@@ -73,6 +80,7 @@ export interface Video {
     {
       id: 7,
       title: "Instagram Reels Masterclass",
+      description: "Quis culpa velit officia dolor nostrud est amet incididunt ipsum. Proident est et do dolore qui tempor sit dolor minim cillum. In laboris nostrud sint et amet velit sint eiusmod minim nulla est. Magna enim magna ad reprehenderit consequat. Eu magna aliqua fugiat velit anim adipisicing dolore quis fugiat officia.",
       author: "James Wilson",
       thumbnail: "/placeholder.svg?height=200&width=350",
       duration: "45:30",
@@ -83,6 +91,7 @@ export interface Video {
     {
       id: 8,
       title: "Camera Movement Basics",
+      description: "Quis culpa velit officia dolor nostrud est amet incididunt ipsum. Proident est et do dolore qui tempor sit dolor minim cillum. In laboris nostrud sint et amet velit sint eiusmod minim nulla est. Magna enim magna ad reprehenderit consequat. Eu magna aliqua fugiat velit anim adipisicing dolore quis fugiat officia.",
       author: "Emma Wilson",
       thumbnail: "/placeholder.svg?height=200&width=350",
       duration: "28:15",
@@ -93,6 +102,7 @@ export interface Video {
     {
       id: 9,
       title: "Color Grading Essentials",
+      description: "Quis culpa velit officia dolor nostrud est amet incididunt ipsum. Proident est et do dolore qui tempor sit dolor minim cillum. In laboris nostrud sint et amet velit sint eiusmod minim nulla est. Magna enim magna ad reprehenderit consequat. Eu magna aliqua fugiat velit anim adipisicing dolore quis fugiat officia.",
       author: "Alex Rivera",
       thumbnail: "/placeholder.svg?height=200&width=350",
       duration: "51:20",
@@ -103,6 +113,7 @@ export interface Video {
     {
       id: 10,
       title: "2D Animation Fundamentals",
+      description: "Quis culpa velit officia dolor nostrud est amet incididunt ipsum. Proident est et do dolore qui tempor sit dolor minim cillum. In laboris nostrud sint et amet velit sint eiusmod minim nulla est. Magna enim magna ad reprehenderit consequat. Eu magna aliqua fugiat velit anim adipisicing dolore quis fugiat officia.",
       author: "Emily Rodriguez",
       thumbnail: "/placeholder.svg?height=200&width=350",
       duration: "56:30",
@@ -113,6 +124,7 @@ export interface Video {
     {
       id: 11,
       title: "Character Animation Workshop",
+      description: "Quis culpa velit officia dolor nostrud est amet incididunt ipsum. Proident est et do dolore qui tempor sit dolor minim cillum. In laboris nostrud sint et amet velit sint eiusmod minim nulla est. Magna enim magna ad reprehenderit consequat. Eu magna aliqua fugiat velit anim adipisicing dolore quis fugiat officia.",
       author: "Marcus Lee",
       thumbnail: "/placeholder.svg?height=200&width=350",
       duration: "62:15",
@@ -123,6 +135,7 @@ export interface Video {
     {
       id: 12,
       title: "Motion Graphics Masterclass",
+      description: "Quis culpa velit officia dolor nostrud est amet incididunt ipsum. Proident est et do dolore qui tempor sit dolor minim cillum. In laboris nostrud sint et amet velit sint eiusmod minim nulla est. Magna enim magna ad reprehenderit consequat. Eu magna aliqua fugiat velit anim adipisicing dolore quis fugiat officia.",
       author: "Sarah Chen",
       thumbnail: "/placeholder.svg?height=200&width=350",
       duration: "48:40",
@@ -133,6 +146,7 @@ export interface Video {
     {
       id: 13,
       title: "Audio Mixing Basics",
+      description: "Quis culpa velit officia dolor nostrud est amet incididunt ipsum. Proident est et do dolore qui tempor sit dolor minim cillum. In laboris nostrud sint et amet velit sint eiusmod minim nulla est. Magna enim magna ad reprehenderit consequat. Eu magna aliqua fugiat velit anim adipisicing dolore quis fugiat officia.",
       author: "David Kim",
       thumbnail: "/placeholder.svg?height=200&width=350",
       duration: "41:20",
@@ -143,6 +157,7 @@ export interface Video {
     {
       id: 14,
       title: "Sound Effects Creation",
+      description: "Quis culpa velit officia dolor nostrud est amet incididunt ipsum. Proident est et do dolore qui tempor sit dolor minim cillum. In laboris nostrud sint et amet velit sint eiusmod minim nulla est. Magna enim magna ad reprehenderit consequat. Eu magna aliqua fugiat velit anim adipisicing dolore quis fugiat officia.",
       author: "Lisa Wong",
       thumbnail: "/placeholder.svg?height=200&width=350",
       duration: "35:45",
@@ -153,6 +168,7 @@ export interface Video {
     {
       id: 15,
       title: "Music Scoring for Video",
+      description: "Quis culpa velit officia dolor nostrud est amet incididunt ipsum. Proident est et do dolore qui tempor sit dolor minim cillum. In laboris nostrud sint et amet velit sint eiusmod minim nulla est. Magna enim magna ad reprehenderit consequat. Eu magna aliqua fugiat velit anim adipisicing dolore quis fugiat officia.",
       author: "John Smith",
       thumbnail: "/placeholder.svg?height=200&width=350",
       duration: "52:30",
@@ -163,6 +179,7 @@ export interface Video {
     {
       id: 16,
       title: "My First Tutorial Video",
+      description: "Quis culpa velit officia dolor nostrud est amet incididunt ipsum. Proident est et do dolore qui tempor sit dolor minim cillum. In laboris nostrud sint et amet velit sint eiusmod minim nulla est. Magna enim magna ad reprehenderit consequat. Eu magna aliqua fugiat velit anim adipisicing dolore quis fugiat officia.",
       author: "You",
       thumbnail: "/placeholder.svg?height=200&width=350",
       duration: "15:20",
@@ -173,6 +190,7 @@ export interface Video {
     {
       id: 17,
       title: "Product Review - Camera Gear",
+      description: "Quis culpa velit officia dolor nostrud est amet incididunt ipsum. Proident est et do dolore qui tempor sit dolor minim cillum. In laboris nostrud sint et amet velit sint eiusmod minim nulla est. Magna enim magna ad reprehenderit consequat. Eu magna aliqua fugiat velit anim adipisicing dolore quis fugiat officia.",
       author: "You",
       thumbnail: "/placeholder.svg?height=200&width=350",
       duration: "22:45",
@@ -183,6 +201,7 @@ export interface Video {
     {
       id: 18,
       title: "Behind the Scenes - Project X",
+      description: "Quis culpa velit officia dolor nostrud est amet incididunt ipsum. Proident est et do dolore qui tempor sit dolor minim cillum. In laboris nostrud sint et amet velit sint eiusmod minim nulla est. Magna enim magna ad reprehenderit consequat. Eu magna aliqua fugiat velit anim adipisicing dolore quis fugiat officia.",
       author: "You",
       thumbnail: "/placeholder.svg?height=200&width=350",
       duration: "18:30",
@@ -193,6 +212,7 @@ export interface Video {
     {
       id: 19,
       title: "Advanced Editing Techniques",
+      description: "Quis culpa velit officia dolor nostrud est amet incididunt ipsum. Proident est et do dolore qui tempor sit dolor minim cillum. In laboris nostrud sint et amet velit sint eiusmod minim nulla est. Magna enim magna ad reprehenderit consequat. Eu magna aliqua fugiat velit anim adipisicing dolore quis fugiat officia.",
       author: "Sarah Johnson",
       thumbnail: "/placeholder.svg?height=200&width=350",
       duration: "45:15",
@@ -203,6 +223,7 @@ export interface Video {
     {
       id: 20,
       title: "Cinematic Lighting Guide",
+      description: "Quis culpa velit officia dolor nostrud est amet incididunt ipsum. Proident est et do dolore qui tempor sit dolor minim cillum. In laboris nostrud sint et amet velit sint eiusmod minim nulla est. Magna enim magna ad reprehenderit consequat. Eu magna aliqua fugiat velit anim adipisicing dolore quis fugiat officia.",
       author: "Michael Chen",
       thumbnail: "/placeholder.svg?height=200&width=350",
       duration: "38:20",
@@ -213,6 +234,7 @@ export interface Video {
     {
       id: 21,
       title: "Color Theory for Filmmakers",
+      description: "Quis culpa velit officia dolor nostrud est amet incididunt ipsum. Proident est et do dolore qui tempor sit dolor minim cillum. In laboris nostrud sint et amet velit sint eiusmod minim nulla est. Magna enim magna ad reprehenderit consequat. Eu magna aliqua fugiat velit anim adipisicing dolore quis fugiat officia.",
       author: "Emma Wilson",
       thumbnail: "/placeholder.svg?height=200&width=350",
       duration: "42:30",
@@ -223,6 +245,7 @@ export interface Video {
     {
       id: 22,
       title: "Advanced Camera Techniques",
+      description: "Quis culpa velit officia dolor nostrud est amet incididunt ipsum. Proident est et do dolore qui tempor sit dolor minim cillum. In laboris nostrud sint et amet velit sint eiusmod minim nulla est. Magna enim magna ad reprehenderit consequat. Eu magna aliqua fugiat velit anim adipisicing dolore quis fugiat officia.",
       author: "James Wilson",
       thumbnail: "/placeholder.svg?height=200&width=350",
       duration: "55:20",
@@ -233,6 +256,7 @@ export interface Video {
     {
       id: 23,
       title: "Video Marketing Masterclass",
+      description: "Quis culpa velit officia dolor nostrud est amet incididunt ipsum. Proident est et do dolore qui tempor sit dolor minim cillum. In laboris nostrud sint et amet velit sint eiusmod minim nulla est. Magna enim magna ad reprehenderit consequat. Eu magna aliqua fugiat velit anim adipisicing dolore quis fugiat officia.",
       author: "Lisa Thompson",
       thumbnail: "/placeholder.svg?height=200&width=350",
       duration: "68:45",

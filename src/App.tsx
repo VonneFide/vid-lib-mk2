@@ -13,7 +13,6 @@ import SubscriptionModal from "./components/subscription-modal"
 import ScrollToTop from "./components/scroll-to-top"
 import ChatWidget from "./components/chat-widget"
 import { useState } from "react"
-import { Outlet } from "react-router-dom"
 
 export default function App() {
   const [isLoginOpen, setIsLoginOpen] = useState(false)
@@ -22,7 +21,6 @@ export default function App() {
   return (
     <main className="min-h-screen min-w-full">
       <Navbar onLoginClick={() => setIsLoginOpen(true)} onSignupClick={() => setIsSignupOpen(true)} />
-      <Outlet />
         <Hero onLoginClick={() => setIsLoginOpen(true)} />
         <Categories />
         <Features />
